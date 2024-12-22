@@ -100,7 +100,7 @@
             </form>
 
             <div class="footer">
-                <p>Déjà inscrit ? <a href="/connection">Se connecter</a></p>
+                <p>Déjà inscrit ? <a href="/connexion">Se connecter</a></p>
             </div>
         </div>
     </div>
