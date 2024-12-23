@@ -9,6 +9,8 @@ class ConnexionController extends Controller
 
 {
     public function formulaire(){
+
+        auth()->logout();
         return view('connexion');
     }
 
@@ -20,7 +22,7 @@ class ConnexionController extends Controller
         ]);
 
         if($result){
-            return "ok";
+            return redirect('/mon-compte');
         }
 
         return back()->withErrors("Login/mdp incorrecte");

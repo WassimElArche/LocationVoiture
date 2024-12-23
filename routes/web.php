@@ -6,12 +6,17 @@ use App\Http\Controllers\ControllerUtilisateur;
 
 use App\Http\Controllers\ConnexionController;
 
-Route::get('/inscription', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\ControllerConnect;
+
+
+Route::get('/inscription', [ControllerUtilisateur::class , 'formulaire']);
 
 Route::post('/inscription' , [ControllerUtilisateur::class , 'create']);
 
-Route::view('/connexion' , 'connexion');
+Route::get('/mon-compte' , [ControllerConnect::class , 'index']);
+
+Route::get('/connexion' ,[ConnexionController::class , 'formulaire']);
 
 Route::post('/connexion' ,[ConnexionController::class , 'traitement']);
+
+Route::get('/deconnect' , [ControllerConnect::class , 'deconnect']);

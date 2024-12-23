@@ -15,4 +15,9 @@ class ControllerUtilisateur extends Controller{
         return redirect('/connexion')->with('Compte bien créer');
     }
 
+public function formulaire(){
+    auth()->logout();
+    return view('welcome');
+}
+
 }
