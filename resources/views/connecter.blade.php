@@ -57,7 +57,9 @@
     
 
         <a class = "btn" href = "/deconnect">Deconnecter</a>
-</div>
+
+        <a class = "btn" href = "/update">modifier mdp</a>
+    </div>
 
 </body>
 </html>
