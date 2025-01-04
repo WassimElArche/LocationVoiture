@@ -86,7 +86,7 @@
 
     <div class="container">
         <div class="form-container">
-            <h2>Modif Mdp</h2>
+            <h2>Supprimer {{request()->route('email')}}</h2>
             <form method="post" action="/admin/{{request()->route('email')}}">
                 {{ csrf_field() }}
   <button type="submit" >Supprimer </button>

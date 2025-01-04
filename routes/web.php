@@ -26,6 +26,10 @@ Route::get('/update' , [ControllerConnect::class , 'formulaireUpdate']);
 
 Route::post('/update' , [ControllerConnect::class , 'update']);
 
+Route::get('/' , function(){
+    return redirect('/inscription');
+});
+
 
 Route::get('/admin', [ControllerConnect::class , 'voir']);
 

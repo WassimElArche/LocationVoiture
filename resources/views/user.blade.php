@@ -87,7 +87,7 @@
 
     <div class="container">
         <div class="form-container">
-            <h2>Modif Mdp</h2>
+            <h2>Modifier un utilisateur</h2>
             <div>
    
 <ol>
