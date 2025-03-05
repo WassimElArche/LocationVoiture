@@ -12,10 +12,10 @@ class Voiture extends Model
         'Km',
         'Type',
         'user_id',
-        'moteur',
+        'moteur','nomImage',
     ];
 
-    public function voitures(){
+    public function users(){
         return $this->belongsTo(User::class , 'user_id');
     }
 }

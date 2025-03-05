@@ -22,7 +22,7 @@ class User extends Authenticatable
         'prenom',
         'email',
         'password',
-        'role',
+        'role','nomImage',
     ];
 
     /**
@@ -47,6 +47,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function voitures(){
+        return $this->hasMany(Voiture::class);
+    }
+
 
     public function isAdmin(){
         return $this->role == 1;

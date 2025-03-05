@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\voitureController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/admin' , adminController::class);
 });
 
+Route::resource('/voiture' , voitureController::class)->middleware(['auth', 'verified']);
 
 
 require __DIR__.'/auth.php';
