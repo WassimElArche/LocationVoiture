@@ -15,7 +15,8 @@ class voitureController extends Controller
      */
     public function index()
     {
-        return view('voiture.main');
+        $voitures = Voiture::all();
+        return view('voiture.main' , compact('voitures'));
     }
 
     /**
@@ -35,7 +36,7 @@ class voitureController extends Controller
     public function store(Request $request)
     {
         
-        $request['nomImage'] = $request->nomImage->store('public');
+        $request['nomImage'] = $request->nomImage->store('image' , 'public');
         auth::user()->voitures()->create($request->input()); //[ ]
         return redirect('/');
     }
